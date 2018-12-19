@@ -7,7 +7,32 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
+
+
 def main():
+
+    class Baby(object):
+        def __init__(self, name):
+            self.name = name
+            self.hourPasses = 0
+            print("Hello baby " + self.name)
+
+        def feed_baby(self):
+            print("Thank you for feeding baby " + self.name)
+
+        def hour_passes(self):
+            if self.hourPasses == 0:
+                print("Baby " + self.name + " is sleeping.")
+                self.hourPasses += 1
+            elif self.hourPasses == 1:
+                print("Baby " + self.name + " is awake.  Time for food.")
+                self.hourPasses += 1
+            else:
+                print("Baby " + self.name + " is CRYING uncontrollably!  Feed the Baby!")
+                self.hourPasses += 1
+                if 3 < self.hourPasses:
+                    self.hourPasses = 0
+
     """
     After you have made the Baby class, run this module. If your Baby
     class is correct, the output of the code below should be exactly this:
