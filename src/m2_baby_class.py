@@ -19,6 +19,7 @@ def main():
 
         def feed_baby(self):
             print("Thank you for feeding baby " + self.name)
+            self.hourPasses = 0
 
         def hour_passes(self):
             if self.hourPasses == 0:
